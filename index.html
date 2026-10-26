@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KKES Shopping List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container" id="container">
+    <header class="header-section">
+      <h1 class="app-title">KKES Shopping</h1>
+      <div class="total-display">
+        <span class="total-label">Total:</span>
+        <span class="total-amount" id="totalAmount"><i class="fa-solid fa-naira-sign" aria-hidden="true"></i> 0.00</span>
+      </div>
+    </header>
+
+    <section class="input-section">
+      <input type="text" id="itemInput" class="input-field" placeholder="Item name">
+      <input type="number" id="priceInput" class="input-field price-input" placeholder="Price" step="0.01" min="0">
+      <button id="addButton" class="add-button" type="button">Add</button>
+    </section>
+
+    <div class="lists-container">
+      <section class="list-section">
+        <h2 class="section-title">
+          <span>Active Items</span>
+          <span class="item-count" id="activeCount">0</span>
+        </h2>
+        <ul id="activeList" class="item-list"></ul>
+      </section>
+
+      <section class="list-section completed-section">
+        <h2 class="section-title">
+          <span>Completed</span>
+          <span class="item-count" id="completedCount">0</span>
+        </h2>
+        <ul id="completedList" class="item-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
